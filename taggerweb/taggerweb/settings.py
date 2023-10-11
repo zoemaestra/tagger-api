@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODxEL = 'tagger.CustomUser'
+AUTH_USER_MODEL = 'tagger.CustomUser'
 
 # Application definition
 
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tagger.apps.TaggerConfig'
+    'tagger'
 ]
 
 MIDDLEWARE = [
