@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# AUTH_USER_MODxEL = 'tagger.CustomUser'
+AUTH_USER_MODxEL = 'tagger.CustomUser'
 
 # Application definition
 
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'tagger.urls'
+ROOT_URLCONF = 'taggerweb.urls'
 
 TEMPLATES = [
     {

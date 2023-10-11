@@ -37,5 +37,18 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
+    groups = models.ManyToManyField(
+        'auth.Group',
+        blank=True,
+        related_name='customuser_groups',
+        related_query_name='customuser',
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        blank=True,
+        related_name='customuser_permissions',
+        related_query_name='customuser',
+    )
+
     def __str__(self):
         return self.email
