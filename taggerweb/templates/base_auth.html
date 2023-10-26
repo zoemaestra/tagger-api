@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" type="text/css" href="{% static "tagger/styles.css" %}">
+
+</head>
+<body>
+<main>
+    <nav id="menu">
+        <a class="homeButton" href="/">Home</a>
+        <a href="/signup">Page 1</a>
+        <a href="/accounts/login">Page 2</a>
+        <a href="/accounts">Page 3</a>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</main>
+</body>
+</html>
