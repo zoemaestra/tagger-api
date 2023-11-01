@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block bodytitle %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <div class="mb-3 d-flex justify-content-center text-center">
+        <h3>{{ user.username.capitalize }}'s device</h3>
+    </div>
+    <div class="d-flex justify-content-around">
+        <div>
+            <div class="pixel-corners--wrapper">
+                <img src="{% static "tagger/default.bmp" %}" alt="Image displayed on your device." class="tagger-img pixel-corners"/>
+            </div>
+        </div>
+        <div>
+            Controlled by: <a href="/">admin</a>
+            <br/>
+            Controlled until: N/A
+            <br/>
+            <div class="border-top border-secondary"></div>
+            New controller: <a href="/">tester</a>
+            <br/>
+            For: <a href="/">1 month</a>
+            <br/>
+            <a href="/">Release control</a>
+            <br/>
+        </div>
+    </div>
+
+
+{% else %}
+  idk marketing content here or someshit
+{% endif %}
+{% endblock %}
